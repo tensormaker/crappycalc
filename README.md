@@ -1,6 +1,6 @@
 # CrappyCalc
 
-## 📦 Crea un nuevo proyecto
+## 📦 Corre el proyecto en tu entorno local
 
 Asegurate que las versiones de [Node.js](https://nodejs.org/en/) `>= 16` y [`dfx`](https://internetcomputer.org/docs/current/developer-docs/build/install-upgrade-remove) `>= 0.14` se encuentren instaladas en tu sistema.
 
