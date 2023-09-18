@@ -17,7 +17,12 @@
     },
 
     "whoami": {
-      "main": "whoami.mo",
+      "main": "canisters/whoami/whoami.mo",
+      "type": "motoko"
+    },
+
+    "social": {
+      "main": "canisters/social/main.mo",
       "type": "motoko"
     },
 
