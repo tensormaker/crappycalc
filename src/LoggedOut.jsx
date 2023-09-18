@@ -6,11 +6,11 @@ function LoggedOut() {
 
   return (
     <div className="container">
-      <h1>Internet Identity Client</h1>
-      <h2>You are not authenticated</h2>
-      <p>To log in, click this button!</p>
+      <h1>Identidad Digital</h1>
+      <h2>No estás autenticado</h2>
+      <p>Para ingresa presiona este botón!</p>
       <button type="button" id="loginButton" onClick={login}>
-        Log in
+        Login
       </button>
     </div>
   );

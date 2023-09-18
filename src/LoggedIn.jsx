@@ -18,27 +18,27 @@ function LoggedIn() {
 
   return (
     <div className="container">
-      <h1>Internet Identity Client</h1>
-      <h2>You are authenticated!</h2>
-      <p>To see how a canister views you, click this button!</p>
+      <h1>Identidad Digital</h1>
+      <h2>Estas autenticado!</h2>
+      <p>Mira como los canisters te ven, haviendo click en este botón!</p>
       <button
         type="button"
         id="whoamiButton"
         className="primary"
         onClick={handleClick}
       >
-        Who am I?
+        Quien soy?
       </button>
       <input
         type="text"
         readOnly
         id="whoami"
         value={result}
-        placeholder="your Identity"
+        placeholder="Tu identidad"
         style={whoamiStyles}
       />
       <button id="logout" onClick={logout}>
-        log out
+        Salir
       </button>
     </div>
   );
