@@ -1,63 +1,18 @@
 actor class Backend() {
-  var cell : Int = 0;
+  stable var counter = 0;
 
-  // Suma
-  public func add(n : Int) : async Int {
-    cell += n; 
-    return cell;
+  // Get the current count
+  public query func get() : async Nat {
+    counter;
   };
 
-  // Resta
-  public func sub(n : Int): async Int {
-    cell -= n; 
-    return cell;
+  // Increment the count by one
+  public func inc() : async () {
+    counter += 1;
   };
 
-  // Multiplicación
-  public func mul(n : Int): async Int {
-    cell *= n; 
-    return cell;
-  };
-
-  // Dividisión
-  public func div(n : Int): async ?Int {
-    if  (n == 0) {
-      return null;
-    };
-
-    cell /= n; 
-    return ?cell;
-  };
-
-  /// Resto o como se llame
-  public func mod(n : Int): async Int {
-    cell %= n;
-    return cell;
-  };
-
-  // Exponencial
-  public func exp(n : Int): async Int {
-    cell **=n;
-    return cell;
-  };
-
-  // Imprimir el valor de cell
-  public func currentValue(): async Int {
-    return cell;
-  };
-
-  // Definir el valor de cell
-  public func setValue(val: Int): async Int {
-    cell := val;
-    return cell;
-  };
-
-  // Borrar Todo
-  public func clearAll(): async Int {
-    if (cell: Int != 0) {
-      cell -= cell;
-    };
-
-    return cell;
+  // Add `n` to the current count
+  public func add(n : Nat) : async () {
+    counter += n;
   };
 };

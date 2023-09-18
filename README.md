@@ -1,32 +1,41 @@
-# CrappyCalc
+# Vite + React + Motoko
 
-## 📦 Corre el proyecto en tu entorno local
+### Get started directly in your browser:
 
-Asegurate que las versiones de [Node.js](https://nodejs.org/en/) `>= 16` y [`dfx`](https://internetcomputer.org/docs/current/developer-docs/build/install-upgrade-remove) `>= 0.14` se encuentren instaladas en tu sistema.
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/rvanasa/vite-react-motoko)
 
-Levanta el proyecto con los siguientes comandos:
+This template gives you everything you need to build a full-stack Web3 application on the [Internet Computer](https://internetcomputer.org/).
+
+For an example of a real-world dapp built using this starter project, check out the [source code](https://github.com/dfinity/feedback) for DFINITY's [Developer Experience Feedback Board](https://dx.internetcomputer.org/).
+
+## 📦 Create a New Project
+
+Make sure that [Node.js](https://nodejs.org/en/) `>= 16` and [`dfx`](https://internetcomputer.org/docs/current/developer-docs/build/install-upgrade-remove) `>= 0.14` are installed on your system.
+
+Run the following commands in a new, empty project directory:
 
 ```sh
-dfx start --clean --background # corre dfx como background
-npm run setup # Instala paquetes, hace deploy de canisters, y genera type bindings
+npx degit rvanasa/vite-react-motoko # Download this starter project
+dfx start --clean --background # Run dfx in the background
+npm run setup # Install packages, deploy canisters, and generate type bindings
 
-npm start # Inicia el servidor local
+npm start # Start the development server
 ```
 
-Si te sientes con ganas de quemar cycles: corre `dfx deploy --network ic` para subir el proyecto a la red de Internet Computer.
+When ready, run `dfx deploy --network ic` to deploy your application to the Internet Computer.
 
-## 🛠️ Stack de tecnologias
+## 🛠️ Technology Stack
 
-- [Vite](https://vitejs.dev/)
-- [React](https://reactjs.org/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Sass](https://sass-lang.com/)
-- [Prettier](https://prettier.io/)
-- [Motoko](https://github.com/dfinity/motoko#readme)
-- [Mops](https://mops.one)
-- [mo-dev](https://github.com/dfinity/motoko-dev-server#readme)
+- [Vite](https://vitejs.dev/): high-performance tooling for front-end web development
+- [React](https://reactjs.org/): a component-based UI library
+- [TypeScript](https://www.typescriptlang.org/): JavaScript extended with syntax for types
+- [Sass](https://sass-lang.com/): an extended syntax for CSS stylesheets
+- [Prettier](https://prettier.io/): code formatting for a wide range of supported languages
+- [Motoko](https://github.com/dfinity/motoko#readme): a safe and simple programming language for the Internet Computer
+- [Mops](https://mops.one): an on-chain community package manager for Motoko
+- [mo-dev](https://github.com/dfinity/motoko-dev-server#readme): a live reload development server for Motoko
 
-## 📚 Documentación
+## 📚 Documentation
 
 - [Vite developer docs](https://vitejs.dev/guide/)
 - [React quick start guide](https://react.dev/learn)
@@ -35,9 +44,9 @@ Si te sientes con ganas de quemar cycles: corre `dfx deploy --network ic` para s
 - [Motoko developer docs](https://internetcomputer.org/docs/current/developer-docs/build/cdks/motoko-dfinity/motoko/)
 - [Mops usage instructions](https://j4mwm-bqaaa-aaaam-qajbq-cai.ic0.app/#/docs/install)
 
-## 💡 Tips
+## 💡 Tips and Tricks
 
-- Customiza tu codigo en el archivo `.prettierrc` y corre `npm run format`.
-- Reduce la latencia de actualizacion agregando el flag `--emulator` a `dfx start`.
-- Instala paquetes de Motoko corriendo `npx ic-mops add <package-name>`. Aquí hay una [lista de paquetes disponibles](https://mops.one/).
-- Separa el manejo del frontend y el backend corriendo `npm run frontend` y `npm run backend` en terminales separadas.
+- Customize your project's code style by editing the `.prettierrc` file and then running `npm run format`.
+- Reduce the latency of update calls by passing the `--emulator` flag to `dfx start`.
+- Install a Motoko package by running `npx ic-mops add <package-name>`. Here is a [list of available packages](https://mops.one/).
+- Split your frontend and backend console output by running `npm run frontend` and `npm run backend` in separate terminals.
