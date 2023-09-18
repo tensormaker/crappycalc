@@ -1,41 +1,33 @@
-/// <reference types="vitest" />
-import react from '@vitejs/plugin-react';
-import { defineConfig } from 'vite';
-import environment from 'vite-plugin-environment';
-import dotenv from 'dotenv';
+import { defineConfig, type UserConfig } from "vite";
+import { readCanisterIds } from "./vite.plugins";
 
-dotenv.config();
-
-export default defineConfig({
-  root: 'src',
-  build: {
-    outDir: '../dist',
-    emptyOutDir: true,
-  },
-  optimizeDeps: {
-    esbuildOptions: {
-      define: {
-        global: 'globalThis',
+export default defineConfig(
+  ({ mode }: UserConfig): UserConfig => ({
+    root: "webapp",
+    build: {
+      outDir: "../dist",
+      emptyOutDir: true,
+      commonjsOptions: {
+        // Source: https://github.com/rollup/plugins/issues/1425#issuecomment-1465626736
+        strictRequires: true,
       },
     },
-  },
-  server: {
-    proxy: {
-      '/api': {
-        target: 'http://127.0.0.1:4943',
-        changeOrigin: true,
+    define: {
+      "process.env": {
+        ...readCanisterIds(),
       },
     },
-  },
-  plugins: [
-    react(),
-    environment('all', { prefix: 'CANISTER_' }),
-    environment('all', { prefix: 'DFX_' }),
-    environment({ BACKEND_CANISTER_ID: '' }),
-  ],
-  test: {
-    environment: 'jsdom',
-    setupFiles: 'setupTests.ts',
-    cache: { dir: '../node_modules/.vitest' },
-  },
-});
+    optimizeDeps: {
+      esbuildOptions: {
+        define: {
+          global: "globalThis",
+        },
+      },
+    },
+    server: {
+      proxy: {
+        "/api": "http://127.0.0.1:4943",
+      },
+    },
+  })
+);
