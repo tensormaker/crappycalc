@@ -12,17 +12,23 @@ import { backend } from './declarations/backend';
 import {evaluate, prodDependencies} from 'mathjs';
 
 function App() {
-  //const [resultado, setResultado] = useState<number | undefined>();
-
   const [input, setInput] = useState('');
+  const [symbol, setSymbol] = useState('');
 
   const agregarInput = val => {
-    setInput(input + val);
+    setInput(input.replace(/[+\-*/]/g, '') + val);
   };
 
-  const calcularResultado = () => {
-    if(input){
-      setInput(evaluate(input));
+  const setValue = val => {
+    backend.setValue(+input);
+    setSymbol(val);
+    setInput(val);
+  }
+
+  const calcularResultado = async () => {
+    if (input) {
+      var val = await backend.add(+input);
+      setInput(val.toString());
     }else{
       alert("Por favor ingrese valores para realizar los calculos");
     }
@@ -54,7 +60,7 @@ function App() {
           <Boton manejarClic={agregarInput}>1</Boton>
           <Boton manejarClic={agregarInput}>2</Boton>
           <Boton manejarClic={agregarInput}>3</Boton>
-          <Boton manejarClic={agregarInput}>+</Boton>
+          <Boton manejarClic={setValue}>+</Boton>
 
         </div>
         <div className='fila'>
