@@ -2,13 +2,14 @@
   "name": "vite-react-motoko",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "setup": "npm i && dfx canister create backend && dfx generate backend && dfx deploy",
-    "start": "run-p frontend backend",
+    "start": "npm run build:css && run-p frontend backend",
     "frontend": "vite --port 3000",
     "backend": "mo-dev --generate --deploy -y",
-    "build": "tsc && vite build",
+    "build": "npm run build:css && tsc && vite build",
+    "build:css": "postcss src/styles/tailwind.css -o src/styles/index.css",
     "test": "run-s test:backend test:frontend",
     "test:frontend": "vitest run",
     "test:backend": "mo-test",
@@ -19,8 +20,15 @@
   "dependencies": {
     "@connect2ic/core": "^0.2.0-beta.5",
     "@connect2ic/react": "^0.2.0-beta.5",
+    "@headlessui/react": "^1.7.17",
+    "@heroicons/react": "^2.0.18",
+    "autoprefixer": "^10.4.15",
+    "postcss": "^8.4.29",
+    "postcss-cli": "^10.1.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.16.0",
+    "tailwindcss": "^3.3.3"
   },
   "devDependencies": {
     "@dfinity/agent": "^0.18.1",
