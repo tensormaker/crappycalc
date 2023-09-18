@@ -10,9 +10,9 @@
     "Canister"
   ],
   "scripts": {
-    "build": "vite build src/auth_client_demo_assets/vanilla --config vite.config.js",
+    "build": "vite build src/vanilla --config vite.config.js",
     "prebuild": "npm run generate",
-    "start": "vite src/auth_client_demo_assets/vanilla --config vite.config.js",
+    "start": "vite src/vanilla --config vite.config.js",
     "start:dfx": "dfx start --background --clean --host \"127.0.0.1:4943\"",
     "start:react": "vite src --config vite.config.react.js",
     "build:react": "vite build src --config vite.config.react.js",
