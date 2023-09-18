@@ -5,6 +5,9 @@
   "auth_client_demo_assets": {
     "local": "bd3sg-teaaa-aaaaa-qaaba-cai"
   },
+  "backend": {
+    "local": "bw4dl-smaaa-aaaaa-qaacq-cai"
+  },
   "whoami": {
     "local": "be2us-64aaa-aaaaa-qaabq-cai"
   }

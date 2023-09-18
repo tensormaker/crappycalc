@@ -13,7 +13,7 @@ function LoggedOut() {
         Login
       </button>
     </div>
-  );
+  ); 
 }
 
 export default LoggedOut;

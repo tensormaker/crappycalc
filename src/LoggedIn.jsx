@@ -1,5 +1,6 @@
 import React from "react";
 import { useAuth } from "./use-auth-client";
+import backend from "./declarations/backend.mo";
 
 const whoamiStyles = {
   border: "1px solid #1a1a1a",
@@ -41,7 +42,7 @@ function LoggedIn() {
         Salir
       </button>
     </div>
-  );
+  ); 
 }
 
 export default LoggedIn;

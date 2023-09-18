@@ -14,8 +14,8 @@
     "prebuild": "npm run generate",
     "start": "vite src/vanilla --config vite.config.js",
     "start:dfx": "dfx start --background --clean --host \"127.0.0.1:4943\"",
-    "start:react": "vite src --config vite.config.react.js",
-    "build:react": "vite build src --config vite.config.react.js",
+    "start:dev": "vite src --config vite.config.js",
+    "build:dev": "vite build src --config vite.config.js",
     "prestart": "npm run generate",
     "release": "node release.mjs",
     "generate": "dfx generate whoami"

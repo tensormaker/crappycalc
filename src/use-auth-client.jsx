@@ -1,6 +1,6 @@
 import { AuthClient } from "@dfinity/auth-client";
 import React, { createContext, useContext, useEffect, useState } from "react";
-import { canisterId, createActor } from "declarations/whoami";
+import { canisterId, createActor } from "./declarations/whoami";
 
 const AuthContext = createContext();
 
@@ -25,7 +25,7 @@ const defaultOptions = {
   },
 };
 
-/**
+/** 
  *
  * @param options - Options for the AuthClient
  * @param {AuthClientCreateOptions} options.createOptions - Options for the AuthClient.create() method
