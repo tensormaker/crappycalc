@@ -1,4 +1,4 @@
-actor class Backend() {
+actor class Calc() {
   var cell : Int = 0;
 
   // Suma
@@ -41,8 +41,14 @@ actor class Backend() {
     return cell;
   };
 
-  // Definir el valor de cell
+  // Imprimir el valor de cell
   public func currentValue() : async Int {
+    return cell;
+  };
+
+  // Definir el valor de cell
+  public func setValue(val : Int) : async Int {
+    cell := val;
     return cell;
   };
 

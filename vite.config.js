@@ -30,5 +30,6 @@ export default defineConfig({
     EnvironmentPlugin("all", { prefix: "CANISTER_" }),
     EnvironmentPlugin("all", { prefix: "DFX_" }),
     EnvironmentPlugin({ BACKEND_CANISTER_ID: "" }),
+    EnvironmentPlugin({ CALC_CANISTER_ID: "" }),
   ],
 });

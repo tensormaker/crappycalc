@@ -1,8 +1,8 @@
 {
   "canisters": {
-    "backend": {
+    "calc": {
       "type": "motoko",
-      "main": "backend/Backend.mo"
+      "main": "calc/main.mo"
     },
     "whoami": {
       "main": "src/whoami/main.mo",
@@ -24,7 +24,8 @@
     "auth_client_demo_assets": {
       "dependencies": [
         "whoami",
-        "internet-identity"
+        "internet-identity",
+        "calc"
       ],
       "source": [
         "src/vanilla/dist"
