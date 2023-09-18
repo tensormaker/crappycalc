@@ -26,8 +26,18 @@ function App() {
   }
 
   const calcularResultado = async () => {
+    var val = 0;
     if (input) {
-      var val = await backend.add(+input);
+      switch (symbol) {
+        case '+':
+          val = await backend.add(+input);
+        case '-':
+          val = await backend.sub(+input);
+        case '*':
+          val = await backend.mul(+input);
+        case '/':
+          val = await backend.div(+input);
+      }
       setInput(val.toString());
     }else{
       alert("Por favor ingrese valores para realizar los calculos");
@@ -67,21 +77,21 @@ function App() {
           <Boton manejarClic={agregarInput}>4</Boton>
           <Boton manejarClic={agregarInput}>5</Boton>
           <Boton manejarClic={agregarInput}>6</Boton>
-          <Boton manejarClic={agregarInput}>-</Boton>
+          <Boton manejarClic={setValue}>-</Boton>
 
         </div>
         <div className='fila'>
           <Boton manejarClic={agregarInput}>7</Boton>
           <Boton manejarClic={agregarInput}>8</Boton>
           <Boton manejarClic={agregarInput}>9</Boton>
-          <Boton manejarClic={agregarInput}>*</Boton>
+          <Boton manejarClic={setValue}>*</Boton>
 
         </div>
         <div className='fila'>
           <Boton manejarClic={calcularResultado}>=</Boton>
           <Boton manejarClic={agregarInput}>0</Boton>
           <Boton manejarClic={agregarInput}>.</Boton>
-          <Boton manejarClic={agregarInput}>/</Boton>
+          <Boton manejarClic={setValue}>/</Boton>
 
         </div>
         <div className='fila'>
