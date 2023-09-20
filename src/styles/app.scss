@@ -1,0 +1,127 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import "variables";
+@import "../components/navbar/navbar.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito' !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-image: url('../assets/matrix.gif');
+    background-size: cover; /* Ajusta el tamaño del fondo para cubrir toda la pantalla */
+    background-repeat: no-repeat; /* Evita que el fondo se repita */
+    background-attachment: fixed; 
+    color: #dadada;
+    a {
+      color: $white;
+    }
+  }
+}
+
+.card {
+  width: 85%;
+  padding-bottom: 15%;
+  margin: 0 auto;
+  margin-top: 30px;
+  background-color: $color-bg;
+  color: $white;
+  box-shadow: -2px -2px 6px rgba(255,255,255,0.05),
+                2px  2px 6px rgba(0,0,0,0.5);
+  background-image: url("../assets/bg.png");
+  background-color: rgba(0, 0, 0, 0.8);
+
+  .texto-tachado {
+    text-decoration: line-through;
+  }
+
+  @keyframes blink {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  .blinking-cursor {
+    font-size: 24px;
+    animation: blink 1s infinite;
+  }
+}
+
+#appBg {
+  height: 420px;
+  width: 300px;
+  //border: 1px solid #fffffe;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-top: 24px;
+  margin-bottom: -180px;
+}
+
+#appBg form {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(36, 42, 71);
+}
+
+#appBg input[type=textfield] {
+  height: 25%;
+  width: 100%;
+  cursor: default;
+  font-family: 'Roboto', sans-serif;
+  background-color: rgb(36, 42, 71);
+  color: #fffffe;
+  padding: 15px;
+  text-align: right;
+  font-size: 50 px;
+  border: 0;
+  outline: none;
+}
+
+#appBg .input {
+  width: 22%;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 26px;
+  color: #fec7d7;
+  background-color: rgb(51, 51, 51) !important;
+  padding: 18px;
+  margin: 3px;
+  border: 0;
+  border-radius: 100%;
+}
+
+#appBg .purple {
+  background-color: rgb(217, 212, 231) !important;
+  color:aliceblue !important;
+}
+
+#appBg .gray {
+  background-color: rgb(51, 51, 51) !important;
+  color: white !important;
+}
+
+.pantalla{
+  height: 75px;
+  border-radius: 50px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-weight: bold;
+  font-size: 30px;
+  background-color: #0a0a23;
+  color: white;
+  padding: 11px 30px 11px 11px;
+  margin: 1px solid #888;
+  box-shadow:  -1px 4px 1px 1px white;
+}

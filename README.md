@@ -1,20 +1,13 @@
 # Identidad digital con react y motoko
 
 ```bash
-cd auth-client-demo/
+cd crappycalc
 dfx start --background --clean
-dfx deps deploy
+dfx generate
 dfx deploy
+npm run dev
 ```
-## agregar identidad digital a tu proyecto
 
-en caso necesario ejecutar lo siguiente:
-
-```bash
-dfx deps pull
-dfx deps init --argument '(null)' internet-identity
-dfx deps deploy
-```
 ### Explicación de nuestro proyecto
 
 Si deseas saber detalles de nuestro proyecto, revisa el video en la siguiente carpeta:
