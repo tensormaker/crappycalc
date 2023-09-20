@@ -31,6 +31,119 @@ function App() {
       <main id="pageContent">
         {isAuthenticated ? <LoggedIn /> : <LoggedOut />}
       </main>
+      <>
+  <title>CrappyCalc</title>
+  <link type="text/css" rel="stylesheet" href="/styles.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+    rel="stylesheet"
+  />
+  <div id="appBg">
+    <form name="calculator">
+      <input
+        type="textfield"
+        name="ans"
+        defaultValue=""
+        autoComplete="off"
+        readOnly=""
+      />
+      <input
+        type="button"
+        defaultValue={7}
+        onclick="document.calculator.ans.value+='7'"
+        className="gray"
+      />
+      <input
+        type="button"
+        defaultValue={8}
+        onclick="document.calculator.ans.value+='8'"
+        className="gray"
+      />
+      <input
+        type="button"
+        defaultValue={9}
+        onclick="document.calculator.ans.value+='9'"
+        className="gray"
+      />
+      <input
+        type="button"
+        defaultValue="+"
+        onclick="document.calculator.ans.value+='+'"
+        className="purple"
+      />
+      <br />
+      <input
+        type="button"
+        defaultValue={4}
+        onclick="document.calculator.ans.value+='4'"
+        className="gray"
+      />
+      <input
+        type="button"
+        defaultValue={5}
+        onclick="document.calculator.ans.value+='5'"
+        className="gray"
+      />
+      <input
+        type="button"
+        defaultValue={6}
+        onclick="document.calculator.ans.value+='6'"
+        className="gray"
+      />
+      <input
+        type="button"
+        defaultValue="-"
+        onclick="document.calculator.ans.value+='-'"
+        className="purple"
+      />
+      <br />
+      <input
+        type="button"
+        defaultValue={1}
+        onclick="document.calculator.ans.value+='1'"
+        className="gray"
+      />
+      <input
+        type="button"
+        defaultValue={2}
+        onclick="document.calculator.ans.value+='2'"
+        className="gray"
+      />
+      <input
+        type="button"
+        defaultValue={3}
+        onclick="document.calculator.ans.value+='3'"
+        className="gray"
+      />
+      <input
+        type="button"
+        defaultValue="X"
+        onclick="document.calculator.ans.value+='*'"
+        className="purple"
+      />
+      <br />
+      <input
+        type="button"
+        defaultValue={0}
+        onclick="document.calculator.ans.value+='0'"
+        className="gray"
+      />
+      <input type="reset" defaultValue="C" />
+      <input
+        type="button"
+        defaultValue="="
+        onclick="document.calculator.ans.value=eval(document.calculator.ans.value)"
+      />
+      <input
+        type="button"
+        defaultValue="/"
+        onclick="document.calculator.ans.value+='/'"
+      />
+    </form>
+  </div>
+</>
+
     </>
   );
 }
