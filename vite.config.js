@@ -7,7 +7,7 @@ dotenv.config();
 export default defineConfig({
   root: 'src',
   build: {
-    outDir: '../dist',
+    outDir: '../public',
     emptyOutDir: true,
   },
   optimizeDeps: {

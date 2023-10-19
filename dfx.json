@@ -28,7 +28,7 @@
         "whoami"
       ],
       "type": "assets",
-      "source": ["dist/"]
+      "source": ["public/"]
     }
   },
   "defaults": {

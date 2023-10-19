@@ -14,10 +14,9 @@
   "license": "Apache-2.0",
   "scripts": {
     "prebuild": "npm run generate",
-    "build": "npm run compile-sass && vite build dist --config vite.config.js",
-    "start": "vite dist --config vite.config.js",
-    "compile-sass": "node-sass src/styles/app.scss -o dist/assets/",
-    "dev": "vite . --config vite.config.js",
+    "build": "vite build ./src --config vite.config.js",
+    "start": "vite ./public --config vite.config.js",
+    "dev": "vite ./src --config vite.config.js",
     "generate": "dfx generate whoami",
     "sources": "mops sources",
     "postinstall": "mops install"
@@ -25,6 +24,7 @@
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
     "bootstrap": "^5.3.2",
+    "node-sass": "^9.0.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.8.0",
     "react-dom": "^18.2.0",
